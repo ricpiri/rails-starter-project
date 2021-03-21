@@ -47,7 +47,6 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    api-pagination (4.8.2)
     arel (9.0.0)
     ast (2.4.0)
     bcrypt (3.1.12)
@@ -64,12 +63,26 @@ GEM
       railties (>= 4.2)
     erubi (1.7.1)
     ffi (1.9.25)
+    friendly_id (5.4.2)
+      activerecord (>= 4.0.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.1)
     jsonapi-renderer (0.2.0)
+    kaminari (1.2.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.1)
+      kaminari-activerecord (= 1.2.1)
+      kaminari-core (= 1.2.1)
+    kaminari-actionview (1.2.1)
+      actionview
+      kaminari-core (= 1.2.1)
+    kaminari-activerecord (1.2.1)
+      activerecord
+      kaminari-core (= 1.2.1)
+    kaminari-core (1.2.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -188,10 +201,11 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
-  api-pagination
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.1.0)
   doorkeeper
+  friendly_id
+  kaminari
   listen (>= 3.0.5, < 3.2)
   pg
   pry
